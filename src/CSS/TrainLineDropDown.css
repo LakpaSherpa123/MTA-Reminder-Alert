@@ -1,0 +1,150 @@
+.dropDown-scroll {
+    max-height: 300px;  /* Adjust height as needed */
+    overflow-y: auto;
+    max-width: 500px;
+}
+
+.reminderContainer{
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    vertical-align: middle;
+    height: flex; 
+    width : 1000px;
+    margin: center; 
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9
+
+}
+
+.outerContainer { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 90vh; 
+    margin: 0; 
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #f0fff9;
+    box-shadow: 0px 15px 20px rgba(205, 216, 212, 0.4);
+    color: #fff;
+    
+  }
+
+  /* From Uiverse.io by G4b413l */ 
+.group {
+ position: relative;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid #515151;
+ background: transparent;
+}
+
+.input:focus {
+ outline: none;
+}
+
+label {
+ color: #999;
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: #5264AE;
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: #5264AE;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: #5264AE;
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+  
+
+
