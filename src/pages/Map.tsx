@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
+import { GoogleMap, TransitLayer, useJsApiLoader } from '@react-google-maps/api';
 
 
-import { DirectionsRenderer, GoogleMap, TransitLayer, useJsApiLoader } from '@react-google-maps/api';
 
-export const MapPage = () => {
+export const MapPage  = () =>{
 
-    // console.log(process.env.REACT_APP_GOOGLEMAP_API_KEY)
+
 
     const { isLoaded } = useJsApiLoader({
-        id: import.meta.env.GOOGLEMAP_API_KEY,
-        googleMapsApiKey: 'AIzaSyAcTBRGIFKleG8VRP7iWt7as-6yubf0kck'
-      
+        id: import.meta.env.VITE_APP_GOOGLEMAP_API_KEY,
+        googleMapsApiKey: import.meta.env.VITE_APP_GOOGLEMAP_API_KEY
     })
 
 
@@ -25,7 +24,7 @@ export const MapPage = () => {
     }
 
   
-    
+
     return isLoaded && (
         <div>
             <GoogleMap
@@ -33,7 +32,10 @@ export const MapPage = () => {
                 center={center}
                 zoom={13}
             >
-           <TransitLayer />
+            <TransitLayer />
+
+       
+    
             </GoogleMap>
         </div>
     );
