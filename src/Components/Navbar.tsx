@@ -2,7 +2,6 @@ import React from 'react'
 
 import '../CSS/Navbar.css'
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 export const Navbar = () => {
@@ -10,7 +9,7 @@ export const Navbar = () => {
 
         //Use Bootstrap for the responsive app Navbar
 
-        <nav className="navbar navbar-expand-md navbar-mainbg navigationWrapper ">
+        <nav className="navbar navbar-expand-md navbar-mainbg navigationWrapper">
             <div className="logoWrapper">
                 <span className="stylish">MTA</span>
                 <span className="logo">lert</span>

@@ -6,9 +6,10 @@ import { ContactPage } from './pages/Contact'
 import { HomePage } from './pages/Home'
 import { ReminderPage } from './pages/Reminders'
 import { MapPage } from './pages/Map'
+import {} from './pages/Data'
 
 function App() {
-
+ 
   return (
 
     <Router>
