@@ -84,6 +84,8 @@ h1 {
       color: white;
       padding: 0 10px;
       cursor: pointer;
+      justify-content: left; /* Horizontally center content */
+      border-bottom: #dbd9d9;
     }
 
 

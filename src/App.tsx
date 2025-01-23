@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navbar } from './Components/Navbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { AboutPage } from './pages/About'

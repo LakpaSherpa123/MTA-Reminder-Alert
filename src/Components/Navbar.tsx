@@ -1,34 +1,45 @@
-import React from 'react'
 
-import '../CSS/Navbar.css'
 import { Link } from 'react-router-dom';
+import '../CSS/Navbar.css'
 
+
+
+// If you only include the Bootstrap CSS file,
+// you'll get the styling but not the interactive functionality.
+// That's why you need to explicitly import the JavaScript as well, 
+// using import 'bootstrap'.
 
 export const Navbar = () => {
+
     return (
 
         //Use Bootstrap for the responsive app Navbar
 
         <nav className="navbar navbar-expand-md navbar-mainbg navigationWrapper">
-            <div className="logoWrapper">
-                <span className="stylish">MTA</span>
-                <span className="logo">lert</span>
-            </div>
+            <div className='container-fluid'>
 
-            <div className="ms-auto">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                     <i className="navbar-toggler-icon"></i>
-            </button>
 
-         
-            <ul className="collapse navbar-collapse ms-auto navigation" id="navbarNav">
+                <div className="logoWrapper">
+                    <span className="stylish">MTA</span>
+                    <span className="logo">lert</span>
+                </div>
+
                 
-                <li id="Home"><Link to="/" className="link"> Home</Link></li>
-                <li id="About"><Link to="/aboutUs" className="link"> About Us</Link></li>
-                <li id="Reminders"><Link to="/reminders" className="link"> Reminders</Link></li>
-                <li id="Map"><Link to="/map" className="link"> Map</Link></li>
-                <li id="Contact"><Link to="/contact" className="link"> Contact</Link></li>
-            </ul>
+                    <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navItems">
+                        <ul className="ms-auto navbar-nav mb-2 mb-lg-0 navigation" >
+                            <li id="Home" className = "nav-item"><Link to="/" className="link"> Home</Link></li>
+                            <li id="About" className = "nav-item"><Link to="/aboutUs" className="link"> About Us</Link></li>
+                            <li id="Reminders" className = "nav-item"><Link to="/reminders" className="link"> Reminders</Link></li>
+                            <li id="Map" className = "nav-item"><Link to="/map" className="link"> Map</Link></li>
+                            <li id="Contact" className = "nav-item"><Link to="/contact" className="link"> Contact</Link></li>
+                        </ul>
+                    </div>
+               
+
             </div>
         </nav>
     );
